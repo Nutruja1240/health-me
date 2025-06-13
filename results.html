@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผลประเมินสุขภาพ - Health Me V.2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/logo.png" alt="Health Me Logo" class="logo">
+            <h1>ผลประเมินสุขภาพ</h1>
+            <div class="result-date" id="resultDate"></div>
+        </header>
+        
+        <main>
+            <div class="result-summary">
+                <div class="summary-card" id="bmiResult">
+                    <h3><i class="fas fa-weight"></i> ดัชนีมวลกาย (BMI)</h3>
+                    <div class="result-value">-</div>
+                    <div class="result-category">-</div>
+                </div>
+                
+                <div class="summary-card" id="waistResult">
+                    <h3><i class="fas fa-ruler-combined"></i> รอบเอว</h3>
+                    <div class="result-value">-</div>
+                    <div class="result-category">-</div>
+                </div>
+                
+                <div class="summary-card" id="overallResult">
+                    <h3><i class="fas fa-star"></i> สมรรถภาพโดยรวม</h3>
+                    <div class="overall-score">-</div>
+                    <div class="result-category">-</div>
+                </div>
+            </div>
+            
+            <div class="result-details">
+                <div class="result-card" id="gripResult">
+                    <h3><i class="fas fa-hand-paper"></i> แรงบีบมือ</h3>
+                    <div class="result-meter">
+                        <div class="meter-bar" style="width: 0%"></div>
+                    </div>
+                    <div class="result-detail">
+                        <span class="result-value">-</span>
+                        <span class="result-category">-</span>
+                    </div>
+                </div>
+                
+                <div class="result-card" id="flexibilityResult">
+                    <h3><i class="fas fa-child"></i> ความอ่อนตัว</h3>
+                    <div class="result-meter">
+                        <div class="meter-bar" style="width: 0%"></div>
+                    </div>
+                    <div class="result-detail">
+                        <span class="result-value">-</span>
+                        <span class="result-category">-</span>
+                    </div>
+                </div>
+                
+                <div class="result-card" id="abdominalResult">
+                    <h3><i class="fas fa-fire-alt"></i> ซิตอัพ 30 วินาที</h3>
+                    <div class="result-meter">
+                        <div class="meter-bar" style="width: 0%"></div>
+                    </div>
+                    <div class="result-detail">
+                        <span class="result-value">-</span>
+                        <span class="result-category">-</span>
+                    </div>
+                </div>
+                
+                <div class="result-card" id="cardioResult">
+                    <h3><i class="fas fa-heart"></i> ยืนยกเข่า 3 นาที</h3>
+                    <div class="result-meter">
+                        <div class="meter-bar" style="width: 0%"></div>
+                    </div>
+                    <div class="result-detail">
+                        <span class="result-value">-</span>
+                        <span class="result-category">-</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recommendations">
+                <h2><i class="fas fa-lightbulb"></i> คำแนะนำ</h2>
+                <ul id="recommendationList"></ul>
+            </div>
+            
+            <div class="result-actions">
+                <button id="saveResult" class="btn-action">
+                    <i class="fas fa-save"></i> บันทึกผล
+                </button>
+                <button id="shareResult" class="btn-action">
+                    <i class="fas fa-share-alt"></i> แชร์ผลลัพธ์
+                </button>
+                <button id="newTest" class="btn-action">
+                    <i class="fas fa-plus"></i> ทำแบบทดสอบใหม่
+                </button>
+            </div>
+            
+            <div class="history-section" id="historySection">
+                <h2><i class="fas fa-history"></i> ประวัติการประเมิน</h2>
+                <div class="history-list" id="historyList"></div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 Health Me V.2 | พัฒนาโดยทีมสุขภาพ</p>
+        </footer>
+    </div>
+    
+    <script src="js/data.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
